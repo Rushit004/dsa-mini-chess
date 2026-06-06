@@ -79,9 +79,9 @@ g++ mini_chess.cpp -o mini_chess
 3. **Controls during the game:**
 
 ```
-Move  :  fromRow fromCol toRow toCol   (e.g. 0 0 1 0)
-Undo  :  -1
-Quit  :  0
+   <fromRow fromCol toRow toCol>  to move
+   -1  to undo last move
+   -2  to quit
 ```
 
 ---
@@ -89,27 +89,30 @@ Quit  :  0
 ## Sample Gameplay
 
 ```
-╔══════════════════════════════╗
-║     DSA Mini Chess  (4x4)    ║
-╠══════════════════════════════╣
-║  Graph  |  Stack  |  Array   ║
-╚══════════════════════════════╝
+  +=========================================+
+  |       D S A   M I N I   C H E S S      |
+  +=========================================+
 
-     Col
-      0  1  2  3
-    +--+--+--+--+
-Row 0 | P |   |   | K |
-    +--+--+--+--+
-Row 1 |   |   |   |   |
-    +--+--+--+--+
-Row 2 |   |   |   |   |
-    +--+--+--+--+
-Row 3 | k |   |   | p |
-    +--+--+--+--+
+         Col 0    Col 1    Col 2    Col 3
+       +--------+--------+--------+--------+
+ Row 0 | W.Pwn  |  ....  |  ....  | W.Kng  |
+       +--------+--------+--------+--------+
+ Row 1 |  ....  |  ....  |  ....  |  ....  |
+       +--------+--------+--------+--------+
+ Row 2 |  ....  |  ....  |  ....  |  ....  |
+       +--------+--------+--------+--------+
+ Row 3 | B.Kng  |  ....  |  ....  | B.Pwn  |
+       +--------+--------+--------+--------+
 
->>> Player White's turn
-    Enter: fromRow fromCol toRow toCol
->>> 0 0 1 0
+  Pieces:  W.Pwn = White Pawn   W.Kng = White King
+           B.Pwn = Black Pawn   B.Kng = Black King
+
+  Controls:  <fromRow fromCol toRow toCol>  to move
+             -1  to undo last move
+             -2  to quit
+
+>>> White's turn
+    Move: fromRow fromCol toRow toCol   |   Undo: -1   |   Quit: -2
 ```
 
 ---
